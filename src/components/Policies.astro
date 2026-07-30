@@ -1,0 +1,77 @@
+---
+// Σελίδα Πολιτικές & Πιστοποιήσεις - κοινό σώμα EL/EN (γλώσσα από currentLocale).
+// Πιστοποιήσεις: 5 πρότυπα (grid). Λήψεις: 4 έγγραφα πολιτικής (PDF, _source/policies -> public/policies).
+// PDF3 = συνδυασμένο έγγραφο 27001 + 22301 (Ασφάλεια Πληροφορίας & Επιχειρησιακή Συνέχεια).
+// PDF4 = Πολιτική Προσωπικών Δεδομένων (απόφαση χρήστη 2026-07-30: δημοσίευση ως έχει).
+import { useTranslations, type Lang } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+
+const certs = [
+  { code: 'ISO 9001:2015', nm: t('iso.9001'), by: 'MTIC Intercert' },
+  { code: 'ISO 14001:2015', nm: t('iso.14001'), by: 'MTIC Intercert' },
+  { code: 'ISO 22301:2019', nm: t('iso.22301'), by: 'Libero Assurance' },
+  { code: 'ISO/IEC 27001:2022', nm: t('iso.27001'), by: 'GCert' },
+  { code: 'ISO/IEC 27701:2019', nm: t('iso.27701'), by: 'Libero Assurance' },
+];
+
+const downloads = [
+  { href: '/policies/politiki-poiotitas.pdf', iso: 'ISO 9001:2015', name: t('pol.dl.1.t') },
+  { href: '/policies/perivallontiki-politiki.pdf', iso: 'ISO 14001:2015', name: t('pol.dl.2.t') },
+  { href: '/policies/politiki-asfaleias-pliroforias.pdf', iso: 'ISO/IEC 27001:2022, ISO 22301:2019', name: t('pol.dl.3.t') },
+  { href: '/policies/politiki-prosopikon-dedomenon.pdf', iso: 'ISO/IEC 27701:2019', name: t('pol.dl.4.t') },
+];
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker"><span>{t('iso.k')}</span></div>
+    <h1>{t('page.politikes.title')}</h1>
+    <p>{t('page.politikes.intro')}</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('pol.certs.k')}</span></div>
+      <h2>{t('pol.certs.title')}</h2>
+      <p>{t('pol.certs.lead')}</p>
+    </div>
+    <div class="iso-grid">
+      {certs.map((c) => (
+        <div class="iso">
+          <div class="code">{c.code}</div>
+          <div class="nm">{c.nm}</div>
+          <div class="by">{c.by}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="block surface2">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('pol.dl.k')}</span></div>
+      <h2>{t('pol.dl.title')}</h2>
+      <p>{t('pol.dl.lead')}</p>
+    </div>
+    <div class="downloads">
+      {downloads.map((d) => (
+        <a class="dl-card" href={d.href} download aria-label={t('pol.dl.action') + ': ' + d.name}>
+          <span class="dl-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg>
+          </span>
+          <div class="dl-iso">{d.iso}</div>
+          <div class="dl-t">{d.name}</div>
+          <span class="dl-link">{t('pol.dl.action')}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+    <div class="note"><span class="dot"></span><span>{t('pol.dl.note')}</span></div>
+  </div>
+</section>

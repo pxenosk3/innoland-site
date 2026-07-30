@@ -1,6 +1,6 @@
 ---
 // Αρχική σελίδα - 11 ενότητες, πιστή μεταφορά του εγκεκριμένου v0.2 μέσω t().
-import { useTranslations, type Lang } from '../i18n/utils';
+import { useTranslations, localizedPath, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -26,7 +26,7 @@ const t = useTranslations(lang);
         <div class="cta fade d3">
           <a class="btn btn-primary" href="#services"><span>{t('hero.cta1')}</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-          <a class="btn btn-ghost" href="#policies"><span>{t('hero.cta2')}</span></a>
+          <a class="btn btn-ghost" href={localizedPath(lang, 'politikes')}><span>{t('hero.cta2')}</span></a>
         </div>
       </div>
       <div class="hero-aside fade d2">

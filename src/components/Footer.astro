@@ -1,5 +1,5 @@
 ---
-import { useTranslations, homeAnchor, type Lang } from '../i18n/utils';
+import { useTranslations, homeAnchor, localizedPath, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 <footer>
   <div class="wrap">
     <div>
-      <img src="/logo.png" alt="INNOLAND" width="120" height="26" />
+      <img src="/logo.png" alt="INNOLAND" width="116" height="26" />
       <p class="co">{t('foot.legal')}</p>
     </div>
     <div>
@@ -17,7 +17,7 @@ const t = useTranslations(lang);
         <a href={homeAnchor(lang, 'services')}>{t('nav.services')}</a>
         <a href={homeAnchor(lang, 'sectors')}>{t('nav.sectors')}</a>
         <a href={homeAnchor(lang, 'about')}>{t('nav.about')}</a>
-        <a href={homeAnchor(lang, 'policies')}>{t('nav.policies')}</a>
+        <a href={localizedPath(lang, 'politikes')}>{t('nav.policies')}</a>
       </div>
     </div>
     <div>

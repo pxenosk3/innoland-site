@@ -148,7 +148,21 @@ export const ui = {
     'iso.22301': 'Επιχειρησιακή Συνέχεια',
     'iso.27001': 'Ασφάλεια Πληροφοριών',
     'iso.27701': 'Προστασία Απορρήτου',
-    'iso.note': 'Τα έγγραφα πολιτικής (PDF) θα αναρτηθούν εδώ προς ελεύθερη λήψη.',
+    'iso.note': 'Οι πολιτικές μας είναι δημόσια διαθέσιμες προς ελεύθερη λήψη σε μορφή PDF.',
+
+    // -- policies page (πιστοποιήσεις + λήψεις) --
+    'pol.certs.k': 'Πιστοποιήσεις',
+    'pol.certs.title': 'Πιστοποιημένα συστήματα διαχείρισης',
+    'pol.certs.lead': 'Η INNOLAND είναι πιστοποιημένη κατά πέντε διεθνή πρότυπα, από διαπιστευμένους φορείς πιστοποίησης.',
+    'pol.dl.k': 'Έγγραφα',
+    'pol.dl.title': 'Πολιτικές προς λήψη',
+    'pol.dl.lead': 'Οι πολιτικές μας είναι δημόσια διαθέσιμες προς ελεύθερη λήψη.',
+    'pol.dl.action': 'Λήψη PDF',
+    'pol.dl.note': 'Τα έγγραφα διατίθενται σε μορφή PDF, στα ελληνικά.',
+    'pol.dl.1.t': 'Πολιτική Ποιότητας',
+    'pol.dl.2.t': 'Περιβαλλοντική Πολιτική',
+    'pol.dl.3.t': 'Πολιτική Ασφάλειας Πληροφοριών & Επιχειρησιακής Συνέχειας',
+    'pol.dl.4.t': 'Πολιτική Προστασίας Προσωπικών Δεδομένων',
 
     // -- clients --
     'clients.k': 'Εμπειρία & πελατολόγιο',
@@ -349,7 +363,21 @@ export const ui = {
     'iso.22301': 'Business Continuity',
     'iso.27001': 'Information Security',
     'iso.27701': 'Privacy Information',
-    'iso.note': 'Policy documents (PDF) will be published here for free download.',
+    'iso.note': 'Our policies are publicly available for free download as PDF.',
+
+    // -- policies page (certifications + downloads) --
+    'pol.certs.k': 'Certifications',
+    'pol.certs.title': 'Certified management systems',
+    'pol.certs.lead': 'INNOLAND is certified against five international standards, by accredited certification bodies.',
+    'pol.dl.k': 'Documents',
+    'pol.dl.title': 'Policies for download',
+    'pol.dl.lead': 'Our policies are publicly available for free download.',
+    'pol.dl.action': 'Download PDF',
+    'pol.dl.note': 'Documents are provided as PDF, in Greek.',
+    'pol.dl.1.t': 'Quality Policy',
+    'pol.dl.2.t': 'Environmental Policy',
+    'pol.dl.3.t': 'Information Security & Business Continuity Policy',
+    'pol.dl.4.t': 'Personal Data Protection Policy',
 
     // -- clients --
     'clients.k': 'Experience & clients',

@@ -1,5 +1,5 @@
 ---
-import { useTranslations, localeBase, homeAnchor, altLocaleUrl, type Lang } from '../i18n/utils';
+import { useTranslations, localeBase, homeAnchor, altLocaleUrl, localizedPath, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -22,10 +22,10 @@ const nav = [
 <header>
   <div class="wrap bar">
     <a class="brand" href={home} aria-label={t('a11y.brand')}>
-      <img src="/logo.png" alt="INNOLAND" width="138" height="30" />
+      <img src="/logo.png" alt="INNOLAND" width="134" height="30" />
     </a>
     <nav class="main" id="nav">
-      {nav.map((n) => <a href={homeAnchor(lang, n.id)}>{t(n.key)}</a>)}
+      {nav.map((n) => <a href={n.id === 'policies' ? localizedPath(lang, 'politikes') : homeAnchor(lang, n.id)}>{t(n.key)}</a>)}
     </nav>
     <div class="controls">
       <div class="seg" role="group" aria-label={t('a11y.langgroup')}>
