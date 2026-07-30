@@ -1,0 +1,279 @@
+---
+// Αρχική σελίδα - 11 ενότητες, πιστή μεταφορά του εγκεκριμένου v0.2 μέσω t().
+import { useTranslations, type Lang } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+---
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker fade">
+          <span>{t('hero.k1')}</span>
+          <span>{t('hero.k2')}</span>
+          <span>{t('hero.k3')}</span>
+        </div>
+        <div class="aud fade d1">
+          <span class="tag">{t('hero.aud1')}</span>
+          <span class="plus">+</span>
+          <span class="tag">{t('hero.aud2')}</span>
+        </div>
+        <h1 class="title fade d1">{t('hero.h1')}</h1>
+        <p class="lead fade d2">{t('hero.lead')}</p>
+        <div class="cta fade d3">
+          <a class="btn btn-primary" href="#services"><span>{t('hero.cta1')}</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a class="btn btn-ghost" href="#policies"><span>{t('hero.cta2')}</span></a>
+        </div>
+      </div>
+      <div class="hero-aside fade d2">
+        <p class="big">{t('hero.aside.big')}</p>
+        <p>{t('hero.aside.p')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHO WE ARE ================= -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('about.k')}</span></div>
+      <h2>{t('about.title')}</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="about-lead">{t('about.lead')}</p>
+        <p class="about-body">{t('about.body')}</p>
+      </div>
+      <div class="model">
+        <h3>{t('about.model.t')}</h3>
+        <p>{t('about.model.p')}</p>
+        <div class="split">
+          <div class="b"><div class="t">{t('about.model.a.t')}</div><div class="s">{t('about.model.a.s')}</div></div>
+          <div class="arrow" aria-hidden="true">+</div>
+          <div class="b"><div class="t">{t('about.model.b.t')}</div><div class="s">{t('about.model.b.s')}</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TWO SECTORS ONE EXPERTISE ================= -->
+<section class="block surface2" id="audiences">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('duo.k')}</span></div>
+      <h2>{t('duo.title')}</h2>
+      <p>{t('duo.lead')}</p>
+    </div>
+    <div class="duo">
+      <div class="col pub">
+        <h3>{t('duo.pub.t')}</h3>
+        <div class="sub">{t('duo.pub.s')}</div>
+        <ul>
+          <li>{t('duo.pub.1')}</li>
+          <li>{t('duo.pub.2')}</li>
+          <li>{t('duo.pub.3')}</li>
+          <li>{t('duo.pub.4')}</li>
+          <li>{t('duo.pub.5')}</li>
+        </ul>
+      </div>
+      <div class="col priv">
+        <h3>{t('duo.priv.t')}</h3>
+        <div class="sub">{t('duo.priv.s')}</div>
+        <ul>
+          <li>{t('duo.priv.1')}</li>
+          <li>{t('duo.priv.2')}</li>
+          <li>{t('duo.priv.3')}</li>
+          <li>{t('duo.priv.4')}</li>
+          <li>{t('duo.priv.5')}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats surface">
+  <div class="wrap">
+    <div class="stat"><div class="n">25+</div><div class="l">{t('stat.years')}</div></div>
+    <div class="stat"><div class="n">200+</div><div class="l">{t('stat.projects')}</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">{t('stat.pillars')}</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">{t('stat.iso')}</div></div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('services.k')}</span></div>
+      <h2>{t('services.title')}</h2>
+      <p>{t('services.lead')}</p>
+    </div>
+    <div class="index">
+      <div class="row"><div class="rn">01</div><div class="rt">{t('s1.t')}</div><div class="rd">{t('s1.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+      <div class="row"><div class="rn">02</div><div class="rt">{t('s2.t')}</div><div class="rd">{t('s2.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+      <div class="row"><div class="rn">03</div><div class="rt">{t('s3.t')}</div><div class="rd">{t('s3.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+      <div class="row"><div class="rn">04</div><div class="rt">{t('s4.t')}</div><div class="rd">{t('s4.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+      <div class="row"><div class="rn">05</div><div class="rt">{t('s5.t')}</div><div class="rd">{t('s5.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+      <div class="row"><div class="rn">06</div><div class="rt">{t('s6.t')}</div><div class="rd">{t('s6.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+      <div class="row"><div class="rn">07</div><div class="rt">{t('s7.t')}</div><div class="rd">{t('s7.d')}</div><div class="ra" aria-hidden="true">→</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTORS ================= -->
+<section class="block surface2" id="sectors">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('sectors.k')}</span></div>
+      <h2>{t('sectors.title')}</h2>
+      <p>{t('sectors.lead')}</p>
+    </div>
+    <div class="sectors">
+      <div class="sector">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M3.5 20a5.5 5.5 0 0 1 11 0"></path><path d="M16 6.5a2.8 2.8 0 0 1 0 5.4"></path><path d="M17.5 20a5.5 5.5 0 0 0-3-4.9"></path></svg></span>
+        <div class="st">{t('sec.1')}</div>
+        <p class="sd">{t('sd.1')}</p>
+      </div>
+      <div class="sector">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"></rect><path d="M8 20h8M12 16v4"></path><path d="M7 9h4M7 12h7"></path></svg></span>
+        <div class="st">{t('sec.2')}</div>
+        <p class="sd">{t('sd.2')}</p>
+      </div>
+      <div class="sector">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.3-6.5-10a6.5 6.5 0 0 1 13 0c0 4.7-6.5 10-6.5 10z"></path><circle cx="12" cy="11" r="2.3"></circle></svg></span>
+        <div class="st">{t('sec.3')}</div>
+        <p class="sd">{t('sd.3')}</p>
+      </div>
+      <div class="sector">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20c6-1 8-6 8-13-6 0-11 2-11 8a5 5 0 0 0 3 5z"></path><path d="M6 20c0-4 1.5-6.5 4-8.5"></path></svg></span>
+        <div class="st">{t('sec.4')}</div>
+        <p class="sd">{t('sd.4')}</p>
+      </div>
+      <div class="sector">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.8 10.7c.5.4.8 1 .8 1.6v.2h6v-.2c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"></path></svg></span>
+        <div class="st">{t('sec.5')}</div>
+        <p class="sd">{t('sd.5')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPROACH ================= -->
+<section class="block" id="approach">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('proc.k')}</span></div>
+      <h2>{t('proc.title')}</h2>
+      <p>{t('proc.lead')}</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="no">01</div><h3>{t('proc.1.t')}</h3><p>{t('proc.1.d')}</p></div>
+      <div class="step"><div class="no">02</div><h3>{t('proc.2.t')}</h3><p>{t('proc.2.d')}</p></div>
+      <div class="step"><div class="no">03</div><h3>{t('proc.3.t')}</h3><p>{t('proc.3.d')}</p></div>
+      <div class="step"><div class="no">04</div><h3>{t('proc.4.t')}</h3><p>{t('proc.4.d')}</p></div>
+    </div>
+    <div class="values">
+      <div class="value"><div class="vt">{t('val.1.t')}</div><div class="vd">{t('val.1.d')}</div></div>
+      <div class="value"><div class="vt">{t('val.2.t')}</div><div class="vd">{t('val.2.d')}</div></div>
+      <div class="value"><div class="vt">{t('val.3.t')}</div><div class="vd">{t('val.3.d')}</div></div>
+      <div class="value"><div class="vt">{t('val.4.t')}</div><div class="vd">{t('val.4.d')}</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POLICIES / ISO ================= -->
+<section class="block surface2" id="policies">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('iso.k')}</span></div>
+      <h2>{t('iso.title')}</h2>
+      <p>{t('iso.lead')}</p>
+    </div>
+    <div class="iso-grid">
+      <div class="iso"><div class="code">ISO 9001:2015</div><div class="nm">{t('iso.9001')}</div><div class="by">MTIC Intercert</div></div>
+      <div class="iso"><div class="code">ISO 14001:2015</div><div class="nm">{t('iso.14001')}</div><div class="by">MTIC Intercert</div></div>
+      <div class="iso"><div class="code">ISO 22301:2019</div><div class="nm">{t('iso.22301')}</div><div class="by">Libero Assurance</div></div>
+      <div class="iso"><div class="code">ISO/IEC 27001:2022</div><div class="nm">{t('iso.27001')}</div><div class="by">GCert</div></div>
+      <div class="iso"><div class="code">ISO/IEC 27701:2019</div><div class="nm">{t('iso.27701')}</div><div class="by">Libero Assurance</div></div>
+    </div>
+    <div class="note"><span class="dot"></span><span>{t('iso.note')}</span></div>
+  </div>
+</section>
+
+<!-- ================= CLIENTS ================= -->
+<section class="block" id="projects">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('clients.k')}</span></div>
+      <h2>{t('clients.title')}</h2>
+      <p>{t('clients.lead')}</p>
+    </div>
+    <div class="erga-facts">
+      <div class="ef"><div class="n">200+</div><div class="l">{t('erga.f1')}</div></div>
+      <div class="ef"><div class="n">120+</div><div class="l">{t('erga.f2')}</div></div>
+      <div class="ef"><div class="n">5</div><div class="l">{t('erga.f3')}</div></div>
+    </div>
+    <div class="clients-grid">
+      <div class="cgroup">
+        <h3>{t('clients.pub.h')}</h3>
+        <p set:html={t('clients.pub.p')}></p>
+      </div>
+      <div class="cgroup">
+        <h3>{t('clients.priv.h')}</h3>
+        <p set:html={t('clients.priv.p')}></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWS (placeholder) ================= -->
+<section class="block surface" id="news">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('news.k')}</span></div>
+      <h2>{t('news.title')}</h2>
+    </div>
+    <div class="news-note"><span class="dot"></span><span>{t('news.note')}</span></div>
+    <div class="news">
+      <div class="card">
+        <div class="meta"><span class="date">{t('news.1.date')}</span><span class="ph">{t('news.ph')}</span></div>
+        <h3>{t('news.1.t')}</h3>
+        <p>{t('news.1.d')}</p>
+      </div>
+      <div class="card">
+        <div class="meta"><span class="date">{t('news.2.date')}</span><span class="ph">{t('news.ph')}</span></div>
+        <h3>{t('news.2.t')}</h3>
+        <p>{t('news.2.d')}</p>
+      </div>
+      <div class="card">
+        <div class="meta"><span class="date">{t('news.3.date')}</span><span class="ph">{t('news.ph')}</span></div>
+        <h3>{t('news.3.t')}</h3>
+        <p>{t('news.3.d')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT CTA ================= -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>{t('cta.title')}</h2>
+      <p>{t('cta.lead')}</p>
+      <a class="btn btn-primary" href="mailto:info@innoland.gr"><span>{t('cta.btn')}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+    <div class="cta-info">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>{t('contact.addr')}</span></span>
+      <a href="tel:+302106995053"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.9 2z"></path></svg><span>+30 210 6995053</span></a>
+      <a href="mailto:info@innoland.gr"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span>info@innoland.gr</span></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+# Normalize line endings to LF in the repo (Cloudflare builds on Linux)
+* text=auto eol=lf
+
+# Binary assets
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary

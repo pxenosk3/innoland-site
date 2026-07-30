@@ -1,0 +1,44 @@
+---
+import { useTranslations, homeAnchor, type Lang } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+---
+
+<footer>
+  <div class="wrap">
+    <div>
+      <img src="/logo.png" alt="INNOLAND" width="120" height="26" />
+      <p class="co">{t('foot.legal')}</p>
+    </div>
+    <div>
+      <h3>{t('foot.nav')}</h3>
+      <div class="fnav">
+        <a href={homeAnchor(lang, 'services')}>{t('nav.services')}</a>
+        <a href={homeAnchor(lang, 'sectors')}>{t('nav.sectors')}</a>
+        <a href={homeAnchor(lang, 'about')}>{t('nav.about')}</a>
+        <a href={homeAnchor(lang, 'policies')}>{t('nav.policies')}</a>
+      </div>
+    </div>
+    <div>
+      <h3>{t('foot.sectors')}</h3>
+      <div class="fnav">
+        <a href={homeAnchor(lang, 'sectors')}>{t('sec.1')}</a>
+        <a href={homeAnchor(lang, 'sectors')}>{t('sec.3')}</a>
+        <a href={homeAnchor(lang, 'sectors')}>{t('sec.5')}</a>
+      </div>
+    </div>
+    <div>
+      <h3>{t('foot.contact')}</h3>
+      <p class="co">
+        {t('contact.addr1')}<br />{t('contact.addr2')}<br />
+        <a href="tel:+302106995053">+30 210 6995053</a><br />
+        <a href="mailto:info@innoland.gr">info@innoland.gr</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap foot-b">
+    <span>{t('foot.rights')}</span>
+    <span>{t('foot.tag')}</span>
+  </div>
+</footer>

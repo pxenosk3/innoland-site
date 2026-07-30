@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageStub from '../components/PageStub.astro';
+import { useTranslations, type Lang } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={t('page.nea.title') + ' - INNOLAND'} description={t('page.nea.intro')}>
+  <PageStub titleKey="page.nea.title" introKey="page.nea.intro" />
+</BaseLayout>

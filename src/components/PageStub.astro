@@ -1,0 +1,32 @@
+---
+// Placeholder σελίδα IA v2 (υπό ολοκλήρωση). Ρητή σήμανση, όχι fake περιεχόμενο.
+import { useTranslations, localeBase, type Lang, type UiKey } from '../i18n/utils';
+
+interface Props {
+  titleKey: UiKey;
+  introKey: UiKey;
+}
+
+const { titleKey, introKey } = Astro.props;
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+const home = localeBase(lang);
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker"><span>INNOLAND</span></div>
+    <h1>{t(titleKey)}</h1>
+    <p>{t(introKey)}</p>
+    <div class="stub-note"><span class="dot"></span><span>{t('stub.note')}</span></div>
+  </div>
+</section>
+
+<section class="stub-body">
+  <div class="wrap">
+    <a class="stub-back" href={home}>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+      {t('stub.back')}
+    </a>
+  </div>
+</section>

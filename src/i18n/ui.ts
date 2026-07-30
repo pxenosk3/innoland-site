@@ -1,0 +1,417 @@
+// ============================================================
+// INNOLAND - i18n dictionary (EL default / EN)
+// EL: από το εγκεκριμένο v0.2 markup. EN: από το I18N.en του v0.2.
+// Νέα keys (meta/a11y/σελίδες IA v2): πιστές αποδόσεις, καμία επινόηση.
+// Πλήρης parity el<->en (κάθε key σε αμφότερες τις γλώσσες).
+// ============================================================
+
+export const languages = { el: 'Ελληνικά', en: 'English' } as const;
+export type Lang = keyof typeof languages;
+export const defaultLang: Lang = 'el';
+
+export const ui = {
+  el: {
+    // -- language switch labels --
+    'lang.el': 'ΕΛ',
+    'lang.en': 'EN',
+
+    // -- a11y / aria --
+    'a11y.brand': 'INNOLAND, αρχική',
+    'a11y.langgroup': 'Γλώσσα',
+    'a11y.theme': 'Εναλλαγή θέματος',
+    'a11y.menu': 'Μενού',
+
+    // -- meta (homepage) --
+    'home.meta.title': 'INNOLAND Ε.Π.Ε. - Σύμβουλοι Ανάπτυξης και Επιχειρηματικότητας',
+    'home.meta.desc': 'INNOLAND Ε.Π.Ε., σύμβουλοι ανάπτυξης και επιχειρηματικότητας για τον δημόσιο και τον ιδιωτικό τομέα. Μελέτη, ωρίμανση, υλοποίηση και αξιολόγηση συγχρηματοδοτούμενων έργων.',
+
+    // -- nav --
+    'nav.services': 'Υπηρεσίες',
+    'nav.sectors': 'Τομείς',
+    'nav.about': 'Η Εταιρεία',
+    'nav.projects': 'Έργα',
+    'nav.news': 'Νέα',
+    'nav.policies': 'Πολιτικές',
+    'nav.contact': 'Επικοινωνία',
+
+    // -- hero --
+    'hero.k1': 'Σύμβουλοι ανάπτυξης',
+    'hero.k2': 'Αθήνα',
+    'hero.k3': 'από το 2001',
+    'hero.aud1': 'Δημόσιος τομέας',
+    'hero.aud2': 'Ιδιωτικός τομέας',
+    'hero.h1': 'Σύμβουλοι ανάπτυξης και επιχειρηματικότητας για τον δημόσιο και τον ιδιωτικό τομέα.',
+    'hero.lead': 'Μελέτη, ωρίμανση, υλοποίηση και αξιολόγηση συγχρηματοδοτούμενων έργων. Στρατηγικός και χωρικός σχεδιασμός, κοινωνική πολιτική, business plans και υπηρεσίες χρηματοδοτικού συμβούλου, για Υπουργεία, Περιφέρειες, Δήμους και επιχειρήσεις.',
+    'hero.cta1': 'Οι υπηρεσίες μας',
+    'hero.cta2': 'Πολιτικές & Πιστοποιήσεις',
+    'hero.aside.big': 'Ευέλικτο, καινοτόμο σχήμα υψηλής ποιότητας συμβουλευτικών και αναπτυξιακών υπηρεσιών.',
+    'hero.aside.p': 'Κεντρική ομάδα διαχείρισης και ευρύ δίκτυο εξωτερικών συνεργατών υψηλής επιστημονικής κατάρτισης, για σύνθετα έργα ανάπτυξης, πολιτικής και τεχνικής βοήθειας.',
+
+    // -- about --
+    'about.k': 'Ποιοι είμαστε',
+    'about.title': 'Μια εταιρεία, δύο τρόποι να δημιουργεί αξία',
+    'about.lead': 'Η INNOLAND Ε.Π.Ε. ιδρύθηκε το 2001 στην Αθήνα ως ευέλικτο και καινοτόμο σχήμα παροχής υψηλής ποιότητας συμβουλευτικών και αναπτυξιακών υπηρεσιών, σε τοπικό, περιφερειακό και εθνικό επίπεδο.',
+    'about.body': 'Ειδικευόμαστε στον σχεδιασμό, στην τεκμηρίωση και στη χάραξη αναπτυξιακών και επιχειρηματικών στρατηγικών, στην υποστήριξη αποφάσεων και στην αναδιοργάνωση οργανισμών και διαδικασιών, καθώς και στην εκπόνηση και διαχείριση τοπικών, περιφερειακών και ευρωπαϊκών αναπτυξιακών προγραμμάτων. Μεταφέρουμε συστηματικά τεχνογνωσία προς τους φορείς με τους οποίους συνεργαζόμαστε, χτίζοντας σχέσεις εμπιστοσύνης και πρακτικά αξιοποιήσιμα αποτελέσματα.',
+    'about.model.t': 'Η δομή μας',
+    'about.model.p': 'Ένα διαφοροποιητικό μοντέλο που συνδυάζει τη σταθερότητα μιας μόνιμης ομάδας με το βάθος ενός εκτεταμένου δικτύου εξειδίκευσης.',
+    'about.model.a.t': 'Κεντρική ομάδα',
+    'about.model.a.s': 'διαχείριση έργων',
+    'about.model.b.t': 'Δίκτυο συνεργατών',
+    'about.model.b.s': 'εξειδικευμένη γνώση',
+
+    // -- duo (two sectors) --
+    'duo.k': 'Ποιους εξυπηρετούμε',
+    'duo.title': 'Δύο τομείς, μία τεχνογνωσία',
+    'duo.lead': 'Η ίδια μεθοδική προσέγγιση στην ανάπτυξη, προσαρμοσμένη στις ανάγκες του δημόσιου και του ιδιωτικού τομέα.',
+    'duo.pub.t': 'Δημόσιος Τομέας & Αυτοδιοίκηση',
+    'duo.pub.s': 'Υπουργεία, Περιφέρειες, Δήμοι, φορείς',
+    'duo.pub.1': 'Επιχειρησιακά και στρατηγικά σχέδια για Δήμους και Περιφέρειες',
+    'duo.pub.2': 'Διαχειριστική επάρκεια ΕΣΠΑ και Ελληνικό Πρότυπο Διαχείρισης Έργων',
+    'duo.pub.3': 'Ωρίμανση, διαχείριση και παρακολούθηση πράξεων ΕΣΠΑ 2021-2027',
+    'duo.pub.4': 'Πιστοποίηση κατά ISO και συμμόρφωση GDPR για κοινωνικές δομές',
+    'duo.pub.5': 'Κοινωνική πολιτική, Κέντρα Κοινότητας και υποστήριξη ΤΕΒΑ',
+    'duo.priv.t': 'Ιδιωτικός Τομέας & Επιχειρήσεις',
+    'duo.priv.s': 'ΜΜΕ, συνεταιρισμοί, αναπτυξιακές εταιρείες',
+    'duo.priv.1': 'Επιχειρηματικά σχέδια (Business Plans) και μελέτες σκοπιμότητας',
+    'duo.priv.2': 'Ίδρυση, επέκταση και συγχώνευση επιχειρήσεων',
+    'duo.priv.3': 'Αναζήτηση επενδυτικών ευκαιριών και αξιολόγηση επενδύσεων',
+    'duo.priv.4': 'Στρατηγικές και κλαδικές μελέτες, δικτυώσεις και clusters',
+    'duo.priv.5': 'Αξιοποίηση εθνικών, κοινοτικών και διεθνών χρηματοδοτικών εργαλείων',
+
+    // -- stats --
+    'stat.years': 'έτη εμπειρίας',
+    'stat.projects': 'αναπτυξιακά έργα',
+    'stat.pillars': 'πυλώνες υπηρεσιών',
+    'stat.iso': 'πιστοποιήσεις ISO',
+
+    // -- services --
+    'services.k': 'Τι κάνουμε',
+    'services.title': 'Επτά πυλώνες υπηρεσιών',
+    'services.lead': 'Πεδία εξειδίκευσης που καλύπτουν όλο τον κύκλο ζωής ενός αναπτυξιακού έργου, από τη στρατηγική έως τη διαχείριση της υλοποίησης.',
+    's1.t': 'Στρατηγικός & Αναπτυξιακός Σχεδιασμός',
+    's1.d': 'Ολοκληρωμένα στρατηγικά και επιχειρηματικά σχέδια (Business Plans), μελέτες σκοπιμότητας, ανάλυση κόστους-οφέλους, ενίσχυση της επιχειρηματικότητας σε στοχευμένους κλάδους.',
+    's2.t': 'Χωρικός & Περιφερειακός Προγραμματισμός',
+    's2.d': 'Βιώσιμη αστική ανάπτυξη, Ολοκληρωμένες Χωρικές Επενδύσεις (ΟΧΕ), προγράμματα έξυπνων πόλεων και έξυπνης διακυβέρνησης.',
+    's3.t': 'Χρηματοδοτικός Σύμβουλος',
+    's3.d': 'Ανίχνευση και αξιοποίηση εθνικών, κοινοτικών και διεθνών χρηματοδοτικών εργαλείων, ωρίμανση και οικονομοτεχνική θεώρηση πράξεων.',
+    's4.t': 'Δημόσιος Τομέας & Αυτοδιοίκηση',
+    's4.d': 'Επιχειρησιακά και στρατηγικά σχέδια, διαχειριστική επάρκεια, city και destination branding, συμμόρφωση ISO και GDPR.',
+    's5.t': 'Κοινωνική Πολιτική & Ένταξη',
+    's5.d': 'Προγράμματα κοινωνικής ένταξης, αντιμετώπισης φτώχειας και ισότητας φύλων, Κέντρα Κοινότητας, Γραφεία Ισότητας και Απασχόλησης, ευάλωτες ομάδες (ΑμεΑ, NEETs).',
+    's6.t': 'Υποστήριξη ΤΕΒΑ',
+    's6.d': 'Διαχειριστική και διοικητική υποστήριξη κοινωνικών συμπράξεων, τεχνική βοήθεια και υπηρεσίες δημοσιότητας έργων ΤΕΒΑ.',
+    's7.t': 'ΕΣΠΑ 2021-2027',
+    's7.d': 'Σχεδιασμός, ωρίμανση και εξειδίκευση παρεμβάσεων, παρακολούθηση και διαχείριση προγραμμάτων και δράσεων.',
+
+    // -- sectors --
+    'sectors.k': 'Πού δραστηριοποιούμαστε',
+    'sectors.title': 'Τομείς δραστηριοποίησης',
+    'sectors.lead': 'Πάνω από 200 αναπτυξιακά έργα σε πέντε αλληλοσυνδεόμενους τομείς πολιτικής και οικονομίας.',
+    'sec.1': 'Κοινωνική ένταξη & απασχόληση',
+    'sec.2': 'Ψηφιακή σύγκλιση & ηλεκτρονική διακυβέρνηση',
+    'sec.3': 'Τοπική & περιφερειακή ανάπτυξη',
+    'sec.4': 'Περιβάλλον & βιωσιμότητα',
+    'sec.5': 'Ανάπτυξη ΜΜΕ & καινοτομία',
+    'sd.1': 'ΤΕΒΑ, Κέντρα Κοινότητας, τοπικά σχέδια απασχόλησης και δομές για ευάλωτες ομάδες.',
+    'sd.2': 'Παρατηρητήρια αγοράς, πληροφοριακά συστήματα και υπηρεσίες ηλεκτρονικής διακυβέρνησης.',
+    'sd.3': 'Επιχειρησιακά και στρατηγικά σχέδια, διαχειριστική επάρκεια, τεχνική υποστήριξη ΕΣΠΑ και ΠΕΠ.',
+    'sd.4': 'Ενεργειακή αποδοτικότητα, βιώσιμη διαχείριση και σχέδια δράσης περιβαλλοντικής πολιτικής.',
+    'sd.5': 'Επιχειρηματικά σχέδια, αξιολόγηση επενδύσεων, κλαδικές μελέτες και τουριστική ανάπτυξη.',
+
+    // -- approach (process) --
+    'proc.k': 'Η προσέγγισή μας',
+    'proc.title': 'Από τη μελέτη στο αποτέλεσμα',
+    'proc.lead': 'Καλύπτουμε ολόκληρο τον κύκλο ζωής ενός έργου, με μία συνεκτική μεθοδολογία σε τέσσερα στάδια.',
+    'proc.1.t': 'Μελέτη',
+    'proc.1.d': 'Ανάλυση αναγκών, δεδομένων και πλαισίου. Μελέτες σκοπιμότητας και στρατηγικός σχεδιασμός.',
+    'proc.2.t': 'Ωρίμανση',
+    'proc.2.d': 'Προετοιμασία και τεκμηρίωση πράξεων για ένταξη σε εθνικά και ευρωπαϊκά χρηματοδοτικά προγράμματα.',
+    'proc.3.t': 'Υλοποίηση',
+    'proc.3.d': 'Διαχείριση, παρακολούθηση και τεχνική υποστήριξη έργων μέχρι την ολοκλήρωσή τους.',
+    'proc.4.t': 'Αξιολόγηση',
+    'proc.4.d': 'Μέτρηση αποτελεσμάτων και επιπτώσεων, ανατροφοδότηση για τη βελτίωση της πολιτικής.',
+    'val.1.t': 'Ποιότητα',
+    'val.1.d': 'Πιστοποιημένες διαδικασίες και συστήματα διαχείρισης.',
+    'val.2.t': 'Καινοτομία',
+    'val.2.d': 'Αξιοποίηση νέων τεχνολογιών στη χάραξη πολιτικής και στη διοικητική υποστήριξη.',
+    'val.3.t': 'Συνεργασία',
+    'val.3.d': 'Μεταφορά τεχνογνωσίας μεταξύ δημόσιου και ιδιωτικού τομέα.',
+    'val.4.t': 'Αποτελεσματικότητα',
+    'val.4.d': 'Έμφαση στη ρεαλιστικότητα και τη χρησιμότητα των αποτελεσμάτων.',
+
+    // -- policies / iso --
+    'iso.k': 'Διαφάνεια & Ποιότητα',
+    'iso.title': 'Πολιτικές & Πιστοποιήσεις',
+    'iso.lead': 'Η INNOLAND λειτουργεί με πιστοποιημένα συστήματα διαχείρισης. Οι πολιτικές μας είναι δημόσια διαθέσιμες.',
+    'iso.9001': 'Διαχείριση Ποιότητας',
+    'iso.14001': 'Περιβαλλοντική Διαχείριση',
+    'iso.22301': 'Επιχειρησιακή Συνέχεια',
+    'iso.27001': 'Ασφάλεια Πληροφοριών',
+    'iso.27701': 'Προστασία Απορρήτου',
+    'iso.note': 'Τα έγγραφα πολιτικής (PDF) θα αναρτηθούν εδώ προς ελεύθερη λήψη.',
+
+    // -- clients --
+    'clients.k': 'Εμπειρία & πελατολόγιο',
+    'clients.title': 'Εμπιστοσύνη από τον δημόσιο και τον ιδιωτικό τομέα',
+    'clients.lead': 'Έργα από το 2001 για τον δημόσιο και τον ιδιωτικό τομέα σε όλη τη χώρα, ομαδοποιημένα ανά πεδίο αντικειμένου και τύπο φορέα, όχι ως αναλυτικός κατάλογος.',
+    'erga.f1': 'αναπτυξιακά έργα',
+    'erga.f2': 'φορείς & πελάτες',
+    'erga.f3': 'πεδία αντικειμένου',
+    'clients.pub.h': 'Δημόσιος τομέας',
+    'clients.pub.p': 'Συνεργαζόμαστε με <b>Υπουργεία</b> (Εσωτερικών, Εργασίας, Ανάπτυξης, Υγείας, Τουρισμού, Εξωτερικών), <b>Διαχειριστικές Αρχές</b>, την <b>Ακαδημία Αθηνών</b>, τη <b>Γενική Γραμματεία Έρευνας & Τεχνολογίας</b>, <b>Περιφέρειες</b> και πλήθος <b>Δήμων</b> σε όλη τη χώρα.',
+    'clients.priv.h': 'Ιδιωτικός τομέας',
+    'clients.priv.p': 'Υποστηρίζουμε <b>Μικρομεσαίες Επιχειρήσεις</b>, <b>Συνεταιρισμούς</b>, <b>Αναπτυξιακές</b> και <b>Δημοτικές Επιχειρήσεις</b>, καθώς και περιφερειακούς και τοπικούς αναπτυξιακούς οργανισμούς, σε θέματα στρατηγικής, επενδύσεων και χρηματοδότησης.',
+
+    // -- news (placeholder) --
+    'news.k': 'Ενημέρωση',
+    'news.title': 'Νέα & Ανακοινώσεις',
+    'news.note': 'Ενδεικτική διάταξη. Οι παρακάτω καταχωρίσεις είναι υπόδειγμα, όχι πραγματικά γεγονότα.',
+    'news.ph': 'Υπόδειγμα',
+    'news.1.date': 'ΗΗ.ΜΜ.2026',
+    'news.2.date': 'ΗΗ.ΜΜ.2026',
+    'news.3.date': 'ΗΗ.ΜΜ.2026',
+    'news.1.t': 'Τίτλος ανακοίνωσης έργου',
+    'news.1.d': 'Σύντομη περίληψη της ανακοίνωσης. Το κείμενο αντικαθίσταται με πραγματικό περιεχόμενο πριν τη δημοσίευση.',
+    'news.2.t': 'Τίτλος ενημέρωσης προγράμματος',
+    'news.2.d': 'Σύντομη περίληψη της ενημέρωσης. Το κείμενο αντικαθίσταται με πραγματικό περιεχόμενο πριν τη δημοσίευση.',
+    'news.3.t': 'Τίτλος εταιρικής είδησης',
+    'news.3.d': 'Σύντομη περίληψη της είδησης. Το κείμενο αντικαθίσταται με πραγματικό περιεχόμενο πριν τη δημοσίευση.',
+
+    // -- contact CTA --
+    'cta.title': 'Ας σχεδιάσουμε μαζί το επόμενο έργο σας',
+    'cta.lead': 'Από τη σύλληψη μιας ιδέας έως την ένταξη και την υλοποίησή της. Επικοινωνήστε μαζί μας για μια πρώτη συζήτηση.',
+    'cta.btn': 'Επικοινωνήστε μαζί μας',
+    'contact.addr': 'Πανεπιστημίου 56, 106 78 Αθήνα',
+    'contact.addr1': 'Πανεπιστημίου 56',
+    'contact.addr2': '106 78 Αθήνα',
+
+    // -- footer --
+    'foot.nav': 'Πλοήγηση',
+    'foot.sectors': 'Τομείς',
+    'foot.contact': 'Επικοινωνία',
+    'foot.legal': 'INNOLAND Ε.Π.Ε. (Καινοτόμα Επιχειρηματικά Δίκτυα Ανάπτυξης). Σύμβουλοι ανάπτυξης και επιχειρηματικότητας. Μέλος Ε.Β.Ε.Α. και Γ.Ε.ΜΗ.',
+    'foot.rights': '© 2026 INNOLAND Ε.Π.Ε. Με επιφύλαξη παντός δικαιώματος.',
+    'foot.tag': 'Ανάπτυξη, στρατηγική, δημόσια και ιδιωτική πρωτοβουλία.',
+
+    // -- IA v2 stub pages --
+    'stub.note': 'Η αναλυτική σελίδα βρίσκεται υπό ολοκλήρωση. Το πλήρες περιεχόμενο θα προστεθεί σύντομα.',
+    'stub.back': 'Επιστροφή στην αρχική',
+    'page.ypiresies.title': 'Υπηρεσίες',
+    'page.ypiresies.intro': 'Επτά πυλώνες υπηρεσιών που καλύπτουν όλο τον κύκλο ζωής ενός αναπτυξιακού έργου, από τη στρατηγική έως τη διαχείριση της υλοποίησης.',
+    'page.tomeis.title': 'Τομείς',
+    'page.tomeis.intro': 'Πάνω από 200 αναπτυξιακά έργα σε πέντε αλληλοσυνδεόμενους τομείς πολιτικής και οικονομίας.',
+    'page.etaireia.title': 'Η Εταιρεία',
+    'page.etaireia.intro': 'Η INNOLAND Ε.Π.Ε., ευέλικτο και καινοτόμο σχήμα συμβουλευτικών και αναπτυξιακών υπηρεσιών από το 2001, με κεντρική ομάδα και ευρύ δίκτυο συνεργατών.',
+    'page.erga.title': 'Έργα',
+    'page.erga.intro': 'Έργα από το 2001 για τον δημόσιο και τον ιδιωτικό τομέα σε όλη τη χώρα, ομαδοποιημένα ανά πεδίο αντικειμένου και τύπο φορέα.',
+    'page.nea.title': 'Νέα',
+    'page.nea.intro': 'Ανακοινώσεις, ενημερώσεις προγραμμάτων και εταιρικά νέα.',
+    'page.politikes.title': 'Πολιτικές & Πιστοποιήσεις',
+    'page.politikes.intro': 'Πιστοποιημένα συστήματα διαχείρισης και δημόσια διαθέσιμες πολιτικές (ISO 9001, 14001, 22301, 27001, 27701).',
+    'page.epikoinonia.title': 'Επικοινωνία',
+    'page.epikoinonia.intro': 'Επικοινωνήστε μαζί μας για μια πρώτη συζήτηση για το επόμενο έργο σας.',
+  },
+  en: {
+    // -- language switch labels --
+    'lang.el': 'ΕΛ',
+    'lang.en': 'EN',
+
+    // -- a11y / aria --
+    'a11y.brand': 'INNOLAND, home',
+    'a11y.langgroup': 'Language',
+    'a11y.theme': 'Toggle theme',
+    'a11y.menu': 'Menu',
+
+    // -- meta (homepage) --
+    'home.meta.title': 'INNOLAND LLC - Development & Entrepreneurship Consultants',
+    'home.meta.desc': 'INNOLAND LLC, development and entrepreneurship consultants for the public and the private sector. Study, maturation, implementation and evaluation of co-funded projects.',
+
+    // -- nav --
+    'nav.services': 'Services',
+    'nav.sectors': 'Sectors',
+    'nav.about': 'Company',
+    'nav.projects': 'Track record',
+    'nav.news': 'News',
+    'nav.policies': 'Policies',
+    'nav.contact': 'Contact',
+
+    // -- hero --
+    'hero.k1': 'Development consultants',
+    'hero.k2': 'Athens',
+    'hero.k3': 'since 2001',
+    'hero.aud1': 'Public sector',
+    'hero.aud2': 'Private sector',
+    'hero.h1': 'Development and entrepreneurship consultants for the public and the private sector.',
+    'hero.lead': 'Study, maturation, implementation and evaluation of co-funded projects. Strategic and spatial planning, social policy, business plans and funding-advisory services for Ministries, Regions, Municipalities and businesses.',
+    'hero.cta1': 'Our services',
+    'hero.cta2': 'Policies & Certifications',
+    'hero.aside.big': 'A flexible, innovative structure delivering high-quality advisory and development services.',
+    'hero.aside.p': 'A core management team and a broad network of highly qualified external associates, for complex development, policy and technical-assistance projects.',
+
+    // -- about --
+    'about.k': 'Who we are',
+    'about.title': 'One company, two ways to create value',
+    'about.lead': 'INNOLAND LLC was founded in 2001 in Athens as a flexible and innovative structure delivering high-quality advisory and development services at local, regional and national level.',
+    'about.body': 'We specialise in the design, documentation and formulation of development and business strategies, in decision support and the reorganisation of organisations and processes, and in the preparation and management of local, regional and European development programmes. We systematically transfer know-how to the bodies we work with, building relationships of trust and practically usable results.',
+    'about.model.t': 'Our structure',
+    'about.model.p': 'A distinctive model that combines the stability of a permanent team with the depth of an extensive network of expertise.',
+    'about.model.a.t': 'Core team',
+    'about.model.a.s': 'project management',
+    'about.model.b.t': 'Associate network',
+    'about.model.b.s': 'specialised knowledge',
+
+    // -- duo (two sectors) --
+    'duo.k': 'Who we serve',
+    'duo.title': 'Two sectors, one expertise',
+    'duo.lead': 'The same methodical approach to development, tailored to the needs of the public and the private sector.',
+    'duo.pub.t': 'Public Sector & Local Government',
+    'duo.pub.s': 'Ministries, Regions, Municipalities, agencies',
+    'duo.pub.1': 'Operational and strategic plans for Municipalities and Regions',
+    'duo.pub.2': 'NSRF management capacity and the Greek Project Management Standard',
+    'duo.pub.3': 'Maturation, management and monitoring of NSRF 2021-2027 operations',
+    'duo.pub.4': 'ISO certification and GDPR compliance for social structures',
+    'duo.pub.5': 'Social policy, Community Centres and FEAD support',
+    'duo.priv.t': 'Private Sector & Business',
+    'duo.priv.s': 'SMEs, cooperatives, development companies',
+    'duo.priv.1': 'Business Plans and feasibility studies',
+    'duo.priv.2': 'Establishing, expanding and merging enterprises',
+    'duo.priv.3': 'Identifying investment opportunities and appraising investments',
+    'duo.priv.4': 'Strategic and sectoral studies, networking and clusters',
+    'duo.priv.5': 'Leveraging national, EU and international funding instruments',
+
+    // -- stats --
+    'stat.years': 'years of experience',
+    'stat.projects': 'development projects',
+    'stat.pillars': 'service pillars',
+    'stat.iso': 'ISO certifications',
+
+    // -- services --
+    'services.k': 'What we do',
+    'services.title': 'Seven service pillars',
+    'services.lead': 'Fields of expertise covering the full life cycle of a development project, from strategy to implementation management.',
+    's1.t': 'Strategic & Development Planning',
+    's1.d': 'Integrated strategic and business plans (Business Plans), feasibility studies, cost-benefit analysis, boosting entrepreneurship in targeted sectors.',
+    's2.t': 'Spatial & Regional Planning',
+    's2.d': 'Sustainable urban development, Integrated Territorial Investments (ITI), smart-city and smart-governance programmes.',
+    's3.t': 'Funding Advisory',
+    's3.d': 'Identifying and leveraging national, EU and international funding instruments, maturation and techno-economic appraisal of operations.',
+    's4.t': 'Public Sector & Local Government',
+    's4.d': 'Operational and strategic plans, management capacity, city and destination branding, ISO and GDPR compliance.',
+    's5.t': 'Social Policy & Inclusion',
+    's5.d': 'Social-inclusion, anti-poverty and gender-equality programmes, Community Centres, Equality and Employment offices, vulnerable groups (people with disabilities, NEETs).',
+    's6.t': 'FEAD Support',
+    's6.d': 'Management and administrative support for social partnerships, technical assistance and publicity services for FEAD projects.',
+    's7.t': 'NSRF 2021-2027',
+    's7.d': 'Design, maturation and specification of interventions, monitoring and management of programmes and actions.',
+
+    // -- sectors --
+    'sectors.k': 'Where we operate',
+    'sectors.title': 'Sectors of activity',
+    'sectors.lead': 'More than 200 development projects across five interconnected sectors of policy and the economy.',
+    'sec.1': 'Social inclusion & employment',
+    'sec.2': 'Digital convergence & e-government',
+    'sec.3': 'Local & regional development',
+    'sec.4': 'Environment & sustainability',
+    'sec.5': 'SME development & innovation',
+    'sd.1': 'FEAD, Community Centres, local employment plans and structures for vulnerable groups.',
+    'sd.2': 'Market observatories, information systems and e-government services.',
+    'sd.3': 'Operational and strategic plans, management capacity, technical support for NSRF and ROP programmes.',
+    'sd.4': 'Energy efficiency, sustainable management and environmental-policy action plans.',
+    'sd.5': 'Business plans, investment appraisal, sectoral studies and tourism development.',
+
+    // -- approach (process) --
+    'proc.k': 'Our approach',
+    'proc.title': 'From study to results',
+    'proc.lead': 'We cover the entire life cycle of a project, with one coherent methodology in four stages.',
+    'proc.1.t': 'Study',
+    'proc.1.d': 'Analysis of needs, data and context. Feasibility studies and strategic planning.',
+    'proc.2.t': 'Maturation',
+    'proc.2.d': 'Preparation and documentation of operations for inclusion in national and European funding programmes.',
+    'proc.3.t': 'Implementation',
+    'proc.3.d': 'Management, monitoring and technical support of projects through to completion.',
+    'proc.4.t': 'Evaluation',
+    'proc.4.d': 'Measuring results and impact, feeding back into better policy.',
+    'val.1.t': 'Quality',
+    'val.1.d': 'Certified processes and management systems.',
+    'val.2.t': 'Innovation',
+    'val.2.d': 'Using new technologies in policy-making and administrative support.',
+    'val.3.t': 'Collaboration',
+    'val.3.d': 'Transfer of know-how between the public and the private sector.',
+    'val.4.t': 'Effectiveness',
+    'val.4.d': 'Emphasis on the realism and usefulness of results.',
+
+    // -- policies / iso --
+    'iso.k': 'Transparency & Quality',
+    'iso.title': 'Policies & Certifications',
+    'iso.lead': 'INNOLAND operates certified management systems. Our policies are publicly available.',
+    'iso.9001': 'Quality Management',
+    'iso.14001': 'Environmental Management',
+    'iso.22301': 'Business Continuity',
+    'iso.27001': 'Information Security',
+    'iso.27701': 'Privacy Information',
+    'iso.note': 'Policy documents (PDF) will be published here for free download.',
+
+    // -- clients --
+    'clients.k': 'Experience & clients',
+    'clients.title': 'Trusted across the public and private sector',
+    'clients.lead': 'Projects since 2001 for the public and the private sector across the country, grouped by field of activity and by type of body, not as a detailed catalogue.',
+    'erga.f1': 'development projects',
+    'erga.f2': 'bodies & clients',
+    'erga.f3': 'fields of activity',
+    'clients.pub.h': 'Public sector',
+    'clients.pub.p': 'We work with <b>Ministries</b> (Interior, Labour, Development, Health, Tourism, Foreign Affairs), <b>Managing Authorities</b>, the <b>Academy of Athens</b>, the <b>General Secretariat for Research & Technology</b>, <b>Regions</b> and numerous <b>Municipalities</b> across the country.',
+    'clients.priv.h': 'Private sector',
+    'clients.priv.p': 'We support <b>Small and Medium Enterprises</b>, <b>Cooperatives</b>, <b>development</b> and <b>municipal enterprises</b>, as well as regional and local development organisations, on strategy, investment and funding.',
+
+    // -- news (placeholder) --
+    'news.k': 'Updates',
+    'news.title': 'News & Announcements',
+    'news.note': 'Indicative layout. The entries below are a placeholder, not real events.',
+    'news.ph': 'Sample',
+    'news.1.date': 'DD.MM.2026',
+    'news.2.date': 'DD.MM.2026',
+    'news.3.date': 'DD.MM.2026',
+    'news.1.t': 'Project announcement title',
+    'news.1.d': 'Short summary of the announcement. This text is replaced with real content before publication.',
+    'news.2.t': 'Programme update title',
+    'news.2.d': 'Short summary of the update. This text is replaced with real content before publication.',
+    'news.3.t': 'Company news title',
+    'news.3.d': 'Short summary of the news item. This text is replaced with real content before publication.',
+
+    // -- contact CTA --
+    'cta.title': 'Let us design your next project together',
+    'cta.lead': 'From the conception of an idea to its approval and implementation. Get in touch for an initial conversation.',
+    'cta.btn': 'Contact us',
+    'contact.addr': '56 Panepistimiou St., 106 78 Athens',
+    'contact.addr1': '56 Panepistimiou St.',
+    'contact.addr2': '106 78 Athens',
+
+    // -- footer --
+    'foot.nav': 'Navigation',
+    'foot.sectors': 'Sectors',
+    'foot.contact': 'Contact',
+    'foot.legal': 'INNOLAND LLC (Innovative Business Development Networks). Development and entrepreneurship consultants. Member of ACCI and GEMI.',
+    'foot.rights': '© 2026 INNOLAND LLC. All rights reserved.',
+    'foot.tag': 'Development, strategy, public and private initiative.',
+
+    // -- IA v2 stub pages --
+    'stub.note': 'This section is being completed. Full content will be added soon.',
+    'stub.back': 'Back to home',
+    'page.ypiresies.title': 'Services',
+    'page.ypiresies.intro': 'Seven service pillars covering the full life cycle of a development project, from strategy to implementation management.',
+    'page.tomeis.title': 'Sectors',
+    'page.tomeis.intro': 'More than 200 development projects across five interconnected sectors of policy and the economy.',
+    'page.etaireia.title': 'Company',
+    'page.etaireia.intro': 'INNOLAND LLC, a flexible and innovative structure delivering advisory and development services since 2001, with a core team and a broad network of associates.',
+    'page.erga.title': 'Track record',
+    'page.erga.intro': 'Projects since 2001 for the public and the private sector across the country, grouped by field of activity and type of body.',
+    'page.nea.title': 'News',
+    'page.nea.intro': 'Announcements, programme updates and company news.',
+    'page.politikes.title': 'Policies & Certifications',
+    'page.politikes.intro': 'Certified management systems and publicly available policies (ISO 9001, 14001, 22301, 27001, 27701).',
+    'page.epikoinonia.title': 'Contact',
+    'page.epikoinonia.intro': 'Get in touch for an initial conversation about your next project.',
+  },
+} as const;
+
+export type UiKey = keyof (typeof ui)['el'];
