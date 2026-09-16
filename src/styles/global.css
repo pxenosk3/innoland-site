@@ -301,16 +301,26 @@ section.block{padding:clamp(56px,9vw,112px) 0}
 footer{background:#12222A; color:#D8E2E4}
 :root[data-theme="dark"] footer{background:#0E1920}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer{background:#0E1920}}
-footer .wrap{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:36px; padding:56px 0 30px}
-@media (max-width:820px){footer .wrap{grid-template-columns:1fr 1fr; gap:30px 24px}}
-@media (max-width:520px){footer .wrap{grid-template-columns:1fr}}
+/* αναλογίες μετρημένες: η 1η στήλη χωρά την επωνυμία ακέραιη, η 3η τις ετικέτες τομέων */
+footer .wrap{display:grid; grid-template-columns:1.9fr 0.8fr 1.3fr 1fr; gap:36px; padding:56px clamp(20px,5vw,48px) 30px}
+/* 980px (όχι 820): στις 4 στήλες η 1η στενεύει κάτω από το πλάτος της επωνυμίας και έσπαγε η γραμμή */
+@media (max-width:1200px){footer .wrap{grid-template-columns:1fr 1fr; gap:30px 24px}}
+/* 700px (όχι 520): στις 2 στήλες η επωνυμία ξαναέσπαγε μεταξύ 560 και 700 */
+@media (max-width:820px){footer .wrap{grid-template-columns:1fr}}
 footer h3{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#8FB0B8; margin-bottom:14px; font-weight:700}
 footer a{color:#D8E2E4; font-size:15px}
 footer a:hover{color:var(--accent)}
 footer .fnav a{display:block; padding:5px 0}
 footer .co{font-size:14.5px; line-height:1.7; color:#AEC3C8; max-width:34ch}
+/* νομική ταυτότητα: μία γραμμή ανά καταχώριση, χωρίς το όριο των 34ch που την έσπαγε */
+footer .co.legal{max-width:none}
+footer .co.legal span{display:block}
+/* <=400px: η επωνυμία δεν χωρά στα 14.5px, ένα σκαλί κάτω αντί για σπάσιμο γραμμής */
+@media (max-width:400px){footer .co.legal{font-size:13.5px}}
 footer img{height:26px; margin-bottom:16px; opacity:.95}
 .foot-b{border-top:1px solid rgba(255,255,255,.1); padding:18px 0; font-size:13px; color:#8FB0B8; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+/* το .foot-b είναι και .wrap: χωρίς αυτό το grid του footer .wrap νικά σε ειδικότητα και το display:flex αγνοείται */
+footer .wrap.foot-b{display:flex; grid-template-columns:none; padding:18px clamp(20px,5vw,48px)}
 
 /* progressive-enhancement reveal: visible by default, animate only when motion allowed */
 .fade{opacity:1}

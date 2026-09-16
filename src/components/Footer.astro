@@ -9,7 +9,12 @@ const t = useTranslations(lang);
   <div class="wrap">
     <div>
       <img src={withBase("logo-v2.png")} alt="INNOLAND" width="116" height="26" />
-      <p class="co">{t('foot.legal')}</p>
+      <p class="co legal">
+        <span>{t('foot.legal.1')}</span>
+        <span>{t('foot.legal.2')}</span>
+        <span>{t('foot.legal.3')}</span>
+        <span>{t('foot.legal.4')}</span>
+      </p>
     </div>
     <div>
       <h3>{t('foot.nav')}</h3>
@@ -33,7 +38,8 @@ const t = useTranslations(lang);
       <p class="co">
         {t('contact.addr1')}<br />{t('contact.addr2')}<br />
         <a href="tel:+302106995053">+30 210 6995053</a><br />
-        <a href="mailto:info@innoland.gr">info@innoland.gr</a>
+        <a href="mailto:info@innoland.gr">info@innoland.gr</a><br />
+        {t('contact.gemi')}
       </p>
     </div>
   </div>

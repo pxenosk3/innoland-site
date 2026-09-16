@@ -198,12 +198,16 @@ export const ui = {
     'contact.addr': 'Πανεπιστημίου 56, 106 78 Αθήνα',
     'contact.addr1': 'Πανεπιστημίου 56',
     'contact.addr2': '106 78 Αθήνα',
+    'contact.gemi': 'Αριθμός Γ.Ε.ΜΗ.: 004559501000',
 
     // -- footer --
     'foot.nav': 'Πλοήγηση',
     'foot.sectors': 'Τομείς',
     'foot.contact': 'Επικοινωνία',
-    'foot.legal': 'INNOLAND Ε.Π.Ε. (Καινοτόμα Επιχειρηματικά Δίκτυα Ανάπτυξης). Σύμβουλοι ανάπτυξης και επιχειρηματικότητας. Μέλος Ε.Β.Ε.Α. και Γ.Ε.ΜΗ.',
+    'foot.legal.1': 'Καινοτόμα Επιχειρηματικά Δίκτυα Ανάπτυξης Ε.Π.Ε.',
+    'foot.legal.2': 'δ.τ. INNOLAND Ε.Π.Ε.',
+    'foot.legal.3': 'Σύμβουλοι ανάπτυξης και επιχειρηματικότητας',
+    'foot.legal.4': 'Μέλος Ε.Β.Ε.Α. και Γ.Ε.ΜΗ.',
     'foot.rights': '© 2026 INNOLAND Ε.Π.Ε. Με επιφύλαξη παντός δικαιώματος.',
     'foot.tag': 'Ανάπτυξη, στρατηγική, δημόσια και ιδιωτική πρωτοβουλία.',
 
@@ -514,12 +518,16 @@ export const ui = {
     'contact.addr': '56 Panepistimiou St., 106 78 Athens',
     'contact.addr1': '56 Panepistimiou St.',
     'contact.addr2': '106 78 Athens',
+    'contact.gemi': 'GEMI No.: 004559501000',
 
     // -- footer --
     'foot.nav': 'Navigation',
     'foot.sectors': 'Sectors',
     'foot.contact': 'Contact',
-    'foot.legal': 'INNOLAND LLC (Innovative Business Development Networks). Development and entrepreneurship consultants. Member of ACCI and GEMI.',
+    'foot.legal.1': 'Innovative Business Development Networks LLC',
+    'foot.legal.2': 'trading as INNOLAND LLC',
+    'foot.legal.3': 'Development and entrepreneurship consultants',
+    'foot.legal.4': 'Member of ACCI and GEMI',
     'foot.rights': '© 2026 INNOLAND LLC. All rights reserved.',
     'foot.tag': 'Development, strategy, public and private initiative.',
 
