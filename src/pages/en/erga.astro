@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageStub from '../../components/PageStub.astro';
+import Track from '../../components/Track.astro';
 import { useTranslations, type Lang } from '../../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'en') as Lang;
@@ -8,5 +8,5 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout title={t('page.erga.title') + ' - INNOLAND'} description={t('page.erga.intro')}>
-  <PageStub titleKey="page.erga.title" introKey="page.erga.intro" />
+  <Track />
 </BaseLayout>

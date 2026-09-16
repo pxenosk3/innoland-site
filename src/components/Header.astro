@@ -1,5 +1,5 @@
 ---
-import { useTranslations, localeBase, homeAnchor, altLocaleUrl, localizedPath, type Lang } from '../i18n/utils';
+import { useTranslations, localeBase, altLocaleUrl, localizedPath, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -9,23 +9,29 @@ const elUrl = altLocaleUrl(path, 'el');
 const enUrl = altLocaleUrl(path, 'en');
 
 const nav = [
-  { id: 'services', key: 'nav.services' },
-  { id: 'sectors', key: 'nav.sectors' },
-  { id: 'about', key: 'nav.about' },
-  { id: 'projects', key: 'nav.projects' },
-  { id: 'news', key: 'nav.news' },
-  { id: 'policies', key: 'nav.policies' },
-  { id: 'contact', key: 'nav.contact' },
+  { slug: 'ypiresies', key: 'nav.services' },
+  { slug: 'tomeis', key: 'nav.sectors' },
+  { slug: 'etaireia', key: 'nav.about' },
+  { slug: 'erga', key: 'nav.projects' },
+  { slug: 'politikes', key: 'nav.policies' },
+  { slug: 'epikoinonia', key: 'nav.contact' },
 ] as const;
+
+// τρέχουσα διαδρομή χωρίς trailing slash, για ενεργό nav item
+const cur = path.replace(/\/+$/, '') || '/';
 ---
 
 <header>
   <div class="wrap bar">
     <a class="brand" href={home} aria-label={t('a11y.brand')}>
-      <img src="/logo.png" alt="INNOLAND" width="134" height="30" />
+      <img src="/logo-v2.png" alt="INNOLAND" width="134" height="30" />
     </a>
     <nav class="main" id="nav">
-      {nav.map((n) => <a href={n.id === 'policies' ? localizedPath(lang, 'politikes') : homeAnchor(lang, n.id)}>{t(n.key)}</a>)}
+      {nav.map((n) => {
+        const href = localizedPath(lang, n.slug);
+        const active = cur === href.replace(/\/+$/, '');
+        return <a href={href} aria-current={active ? 'page' : undefined}>{t(n.key)}</a>;
+      })}
     </nav>
     <div class="controls">
       <div class="seg" role="group" aria-label={t('a11y.langgroup')}>

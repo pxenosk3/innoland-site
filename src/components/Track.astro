@@ -1,0 +1,95 @@
+---
+// Σελίδα Έργα - συγκεντρωτικά (headline stats + πεδία + ενδεικτικά έργα + πελατολόγιο), όχι αναλυτικός κατάλογος.
+// Reuse erga.f* / sec.* / sd.* / clients.* + νέα trk.* (4 ενδεικτικά έργα από masters).
+import { useTranslations, type Lang, type UiKey } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+
+const facts: { n: string; l: UiKey }[] = [
+  { n: '200+', l: 'erga.f1' },
+  { n: '120+', l: 'erga.f2' },
+  { n: '5', l: 'erga.f3' },
+];
+const fields: { t: UiKey; d: UiKey }[] = [
+  { t: 'sec.1', d: 'sd.1' },
+  { t: 'sec.2', d: 'sd.2' },
+  { t: 'sec.3', d: 'sd.3' },
+  { t: 'sec.4', d: 'sd.4' },
+  { t: 'sec.5', d: 'sd.5' },
+];
+const cases: { t: UiKey; d: UiKey }[] = [
+  { t: 'trk.case.1.t', d: 'trk.case.1.d' },
+  { t: 'trk.case.2.t', d: 'trk.case.2.d' },
+  { t: 'trk.case.3.t', d: 'trk.case.3.d' },
+  { t: 'trk.case.4.t', d: 'trk.case.4.d' },
+];
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker"><span>{t('clients.k')}</span></div>
+    <h1>{t('page.erga.title')}</h1>
+    <p>{t('page.erga.intro')}</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="erga-facts">
+      {facts.map((f) => <div class="ef"><div class="n">{f.n}</div><div class="l">{t(f.l)}</div></div>)}
+    </div>
+    <div class="note"><span class="dot"></span><span>{t('trk.note')}</span></div>
+  </div>
+</section>
+
+<section class="block surface2">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('trk.fields.k')}</span></div>
+      <h2>{t('trk.fields.title')}</h2>
+      <p>{t('trk.fields.lead')}</p>
+    </div>
+    <div class="sectors">
+      {fields.map((f) => <div class="sector"><div class="st">{t(f.t)}</div><p class="sd">{t(f.d)}</p></div>)}
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('trk.cases.k')}</span></div>
+      <h2>{t('trk.cases.title')}</h2>
+      <p>{t('trk.cases.lead')}</p>
+    </div>
+    <div class="cases">
+      {cases.map((c) => <div class="case"><div class="ct">{t(c.t)}</div><div class="cd">{t(c.d)}</div></div>)}
+    </div>
+  </div>
+</section>
+
+<section class="block surface2">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('clients.k')}</span></div>
+      <h2>{t('clients.title')}</h2>
+      <p>{t('clients.lead')}</p>
+    </div>
+    <div class="clients-grid">
+      <div class="cgroup"><h3>{t('clients.pub.h')}</h3><p set:html={t('clients.pub.p')}></p></div>
+      <div class="cgroup"><h3>{t('clients.priv.h')}</h3><p set:html={t('clients.priv.p')}></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band solo">
+  <div class="wrap">
+    <div>
+      <h2>{t('cta.title')}</h2>
+      <p>{t('cta.lead')}</p>
+      <a class="btn btn-primary" href="mailto:info@innoland.gr"><span>{t('cta.btn')}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+// Σελίδα Νέα - ειλικρινές empty state (καμία εικονική είδηση). Κοινό σώμα EL/EN.
+import { useTranslations, type Lang } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker"><span>{t('news.k')}</span></div>
+    <h1>{t('page.nea.title')}</h1>
+    <p>{t('page.nea.intro')}</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="empty">
+      <span class="em-ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M8 9h8M8 13h6"></path></svg>
+      </span>
+      <h2>{t('nea.soon.t')}</h2>
+      <p>{t('nea.soon.d')}</p>
+      <p class="em-cta">{t('nea.cta')}</p>
+      <a class="btn btn-primary" href="mailto:info@innoland.gr"><span>{t('cta.btn')}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </div>
+</section>

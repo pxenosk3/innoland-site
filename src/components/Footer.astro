@@ -1,5 +1,5 @@
 ---
-import { useTranslations, homeAnchor, localizedPath, type Lang } from '../i18n/utils';
+import { useTranslations, localizedPath, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -8,24 +8,24 @@ const t = useTranslations(lang);
 <footer>
   <div class="wrap">
     <div>
-      <img src="/logo.png" alt="INNOLAND" width="116" height="26" />
+      <img src="/logo-v2.png" alt="INNOLAND" width="116" height="26" />
       <p class="co">{t('foot.legal')}</p>
     </div>
     <div>
       <h3>{t('foot.nav')}</h3>
       <div class="fnav">
-        <a href={homeAnchor(lang, 'services')}>{t('nav.services')}</a>
-        <a href={homeAnchor(lang, 'sectors')}>{t('nav.sectors')}</a>
-        <a href={homeAnchor(lang, 'about')}>{t('nav.about')}</a>
+        <a href={localizedPath(lang, 'ypiresies')}>{t('nav.services')}</a>
+        <a href={localizedPath(lang, 'tomeis')}>{t('nav.sectors')}</a>
+        <a href={localizedPath(lang, 'etaireia')}>{t('nav.about')}</a>
         <a href={localizedPath(lang, 'politikes')}>{t('nav.policies')}</a>
       </div>
     </div>
     <div>
       <h3>{t('foot.sectors')}</h3>
       <div class="fnav">
-        <a href={homeAnchor(lang, 'sectors')}>{t('sec.1')}</a>
-        <a href={homeAnchor(lang, 'sectors')}>{t('sec.3')}</a>
-        <a href={homeAnchor(lang, 'sectors')}>{t('sec.5')}</a>
+        <a href={localizedPath(lang, 'tomeis')}>{t('sec.1')}</a>
+        <a href={localizedPath(lang, 'tomeis')}>{t('sec.3')}</a>
+        <a href={localizedPath(lang, 'tomeis')}>{t('sec.5')}</a>
       </div>
     </div>
     <div>

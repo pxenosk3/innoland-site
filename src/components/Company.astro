@@ -1,0 +1,129 @@
+---
+// Σελίδα Η Εταιρεία - ιστορικό, δομή, ταυτότητα, προσέγγιση, πιστοποιήσεις (κοινό σώμα EL/EN).
+// Reuse about.* / about.model.* / proc.* / val.* / iso.* + νέα co.* (ιστορικό & ταυτότητα από masters).
+import { useTranslations, localizedPath, type Lang, type UiKey } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'el') as Lang;
+const t = useTranslations(lang);
+
+const idrows: { k: UiKey; v: UiKey }[] = [
+  { k: 'co.id.name.l', v: 'co.id.name.v' },
+  { k: 'co.id.dt.l', v: 'co.id.dt.v' },
+  { k: 'co.id.founded.l', v: 'co.id.founded.v' },
+  { k: 'co.id.seat.l', v: 'co.id.seat.v' },
+  { k: 'co.id.member.l', v: 'co.id.member.v' },
+  { k: 'co.id.certs.l', v: 'co.id.certs.v' },
+];
+const steps: { no: string; t: UiKey; d: UiKey }[] = [
+  { no: '01', t: 'proc.1.t', d: 'proc.1.d' },
+  { no: '02', t: 'proc.2.t', d: 'proc.2.d' },
+  { no: '03', t: 'proc.3.t', d: 'proc.3.d' },
+  { no: '04', t: 'proc.4.t', d: 'proc.4.d' },
+];
+const vals: { t: UiKey; d: UiKey }[] = [
+  { t: 'val.1.t', d: 'val.1.d' },
+  { t: 'val.2.t', d: 'val.2.d' },
+  { t: 'val.3.t', d: 'val.3.d' },
+  { t: 'val.4.t', d: 'val.4.d' },
+];
+const certs: { code: string; nm: UiKey; by: string }[] = [
+  { code: 'ISO 9001:2015', nm: 'iso.9001', by: 'MTIC Intercert' },
+  { code: 'ISO 14001:2015', nm: 'iso.14001', by: 'MTIC Intercert' },
+  { code: 'ISO 22301:2019', nm: 'iso.22301', by: 'Libero Assurance' },
+  { code: 'ISO/IEC 27001:2022', nm: 'iso.27001', by: 'GCert' },
+  { code: 'ISO/IEC 27701:2019', nm: 'iso.27701', by: 'Libero Assurance' },
+];
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker"><span>{t('about.k')}</span></div>
+    <h1>{t('page.etaireia.title')}</h1>
+    <p>{t('page.etaireia.intro')}</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('co.hist.k')}</span></div>
+      <h2>{t('about.title')}</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="about-lead">{t('co.hist.1')}</p>
+        <p class="about-body">{t('co.hist.2')}</p>
+        <p class="about-body">{t('co.hist.3')}</p>
+      </div>
+      <div class="model">
+        <h3>{t('about.model.t')}</h3>
+        <p>{t('about.model.p')}</p>
+        <div class="split">
+          <div class="b"><div class="t">{t('about.model.a.t')}</div><div class="s">{t('about.model.a.s')}</div></div>
+          <div class="arrow" aria-hidden="true">+</div>
+          <div class="b"><div class="t">{t('about.model.b.t')}</div><div class="s">{t('about.model.b.s')}</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block surface2">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('co.id.k')}</span></div>
+      <h2>{t('co.id.title')}</h2>
+      <p>{t('co.id.lead')}</p>
+    </div>
+    <div class="idlist">
+      {idrows.map((r) => (
+        <div class="idrow"><div class="k">{t(r.k)}</div><div class="v">{t(r.v)}</div></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('proc.k')}</span></div>
+      <h2>{t('proc.title')}</h2>
+      <p>{t('proc.lead')}</p>
+    </div>
+    <div class="steps">
+      {steps.map((s) => <div class="step"><div class="no">{s.no}</div><h3>{t(s.t)}</h3><p>{t(s.d)}</p></div>)}
+    </div>
+    <div class="values">
+      {vals.map((v) => <div class="value"><div class="vt">{t(v.t)}</div><div class="vd">{t(v.d)}</div></div>)}
+    </div>
+  </div>
+</section>
+
+<section class="block surface2">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('iso.k')}</span></div>
+      <h2>{t('iso.title')}</h2>
+      <p>{t('iso.lead')}</p>
+    </div>
+    <div class="iso-grid">
+      {certs.map((c) => <div class="iso"><div class="code">{c.code}</div><div class="nm">{t(c.nm)}</div><div class="by">{c.by}</div></div>)}
+    </div>
+    <div class="note"><span class="dot"></span><span>{t('iso.note')}</span></div>
+    <p style="margin-top:26px">
+      <a class="btn btn-ghost" href={localizedPath(lang, 'politikes')}><span>{t('co.certs.cta')}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </p>
+  </div>
+</section>
+
+<section class="cta-band solo">
+  <div class="wrap">
+    <div>
+      <h2>{t('cta.title')}</h2>
+      <p>{t('cta.lead')}</p>
+      <a class="btn btn-primary" href="mailto:info@innoland.gr"><span>{t('cta.btn')}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </div>
+</section>

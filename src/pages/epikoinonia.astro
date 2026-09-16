@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageStub from '../components/PageStub.astro';
+import Contact from '../components/Contact.astro';
 import { useTranslations, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
@@ -8,5 +8,5 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout title={t('page.epikoinonia.title') + ' - INNOLAND'} description={t('page.epikoinonia.intro')}>
-  <PageStub titleKey="page.epikoinonia.title" introKey="page.epikoinonia.intro" />
+  <Contact />
 </BaseLayout>
