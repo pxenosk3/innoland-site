@@ -1,5 +1,5 @@
 ---
-import { useTranslations, localeBase, altLocaleUrl, localizedPath, type Lang } from '../i18n/utils';
+import { useTranslations, localeBase, altLocaleUrl, localizedPath, withBase, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -24,7 +24,7 @@ const cur = path.replace(/\/+$/, '') || '/';
 <header>
   <div class="wrap bar">
     <a class="brand" href={home} aria-label={t('a11y.brand')}>
-      <img src="/logo-v2.png" alt="INNOLAND" width="134" height="30" />
+      <img src={withBase("logo-v2.png")} alt="INNOLAND" width="134" height="30" />
     </a>
     <nav class="main" id="nav">
       {nav.map((n) => {

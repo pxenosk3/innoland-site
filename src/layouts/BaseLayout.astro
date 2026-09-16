@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { altLocaleUrl, type Lang } from '../i18n/utils';
+import { altLocaleUrl, withBase, type Lang } from '../i18n/utils';
 
 interface Props {
   title: string;
@@ -33,7 +33,7 @@ const ogLocale = lang === 'en' ? 'en_GB' : 'el_GR';
     <link rel="alternate" hreflang="x-default" href={elHref} />
     <meta name="theme-color" content="#508090" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0F191D" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={withBase("favicon.svg")} type="image/svg+xml" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="INNOLAND" />

@@ -4,10 +4,20 @@ import sitemap from '@astrojs/sitemap';
 
 // INNOLAND Ε.Π.Ε. - Astro SSG, δίγλωσσο EL (default) / EN.
 // EL στη ρίζα (/), EN στο /en/ (prefixDefaultLocale: false).
-// Static output -> deploy σε Cloudflare Pages χωρίς adapter.
+// Static output -> σερβίρεται αυτούσιο το dist (GitHub Pages / Cloudflare Pages).
+
+// ------------------------------------------------------------------
+// ΠΡΟΟΡΙΣΜΟΣ ΔΗΜΟΣΙΕΥΣΗΣ (config-driven, βλ. README §Deploy)
+// Τρέχον: GitHub Pages project site -> υποδιαδρομή /innoland-site.
+// Μετάβαση σε innoland.gr: SITE_URL='https://innoland.gr', SITE_BASE='/'.
+// Οι μεταβλητές περιβάλλοντος υπερισχύουν (CI/άλλος host χωρίς αλλαγή κώδικα).
+// ------------------------------------------------------------------
+const SITE_URL = process.env.SITE_URL ?? 'https://pxenosk3.github.io';
+const SITE_BASE = process.env.SITE_BASE ?? '/innoland-site';
+
 export default defineConfig({
-  // Απόλυτο URL για canonical/sitemap. Επιβεβαίωση apex vs www πριν το deploy (βλ. README).
-  site: 'https://innoland.gr',
+  site: SITE_URL,
+  base: SITE_BASE,
   output: 'static',
   i18n: {
     locales: ['el', 'en'],

@@ -17,9 +17,29 @@ export function getLangFromUrl(url: URL): Lang {
   return seg === 'en' ? 'en' : 'el';
 }
 
-// Βάση διαδρομής ανά γλώσσα: EL -> '/', EN -> '/en/'.
+// Βάση δημοσίευσης (astro.config `base`), κανονικοποιημένη σε '/...' με τελική '/'.
+// '/' όταν το site ζει στη ρίζα domain, '/innoland-site/' σε GitHub Pages project site.
+const rawBase = import.meta.env.BASE_URL ?? '/';
+export const siteBase: string =
+  ('/' + rawBase.replace(/^\/+/, '').replace(/\/+$/, '') + '/').replace(/^\/{2,}/, '/');
+
+// Πρόθεμα βάσης σε path/asset. Δέχεται 'logo.png' ή '/logo.png'.
+export function withBase(path: string): string {
+  return siteBase + path.replace(/^\/+/, '');
+}
+
+// Αφαίρεση του προθέματος βάσης από pathname (για λογική ανεξάρτητη του host).
+export function stripBase(pathname: string): string {
+  if (siteBase === '/') return pathname;
+  const b = siteBase.slice(0, -1); // χωρίς τελική '/'
+  if (pathname === b) return '/';
+  if (pathname.startsWith(siteBase)) return '/' + pathname.slice(siteBase.length);
+  return pathname;
+}
+
+// Βάση διαδρομής ανά γλώσσα: EL -> <base>, EN -> <base>en/.
 export function localeBase(lang: Lang): string {
-  return lang === 'en' ? '/en/' : '/';
+  return lang === 'en' ? withBase('en/') : siteBase;
 }
 
 // Localized path για εσωτερικό route slug (π.χ. 'ypiresies').
@@ -36,13 +56,14 @@ export function homeAnchor(lang: Lang, id: string): string {
 
 // URL της άλλης γλώσσας για την ίδια σελίδα (για τον διακόπτη γλώσσας).
 export function altLocaleUrl(pathname: string, target: Lang): string {
-  const isEn = pathname === '/en' || pathname === '/en/' || pathname.startsWith('/en/');
-  let base = isEn ? pathname.replace(/^\/en/, '') : pathname;
-  if (base === '') base = '/';
+  const p = stripBase(pathname);
+  const isEn = p === '/en' || p === '/en/' || p.startsWith('/en/');
+  let rest = isEn ? p.replace(/^\/en/, '') : p;
+  if (rest === '') rest = '/';
   if (target === 'en') {
-    return base === '/' ? '/en/' : '/en' + base;
+    return rest === '/' ? withBase('en/') : withBase('en' + rest);
   }
-  return base;
+  return withBase(rest);
 }
 
 // IA v2 route slugs (κοινά και για τις δύο γλώσσες).

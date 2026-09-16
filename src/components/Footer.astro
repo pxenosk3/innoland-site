@@ -1,5 +1,5 @@
 ---
-import { useTranslations, localizedPath, type Lang } from '../i18n/utils';
+import { useTranslations, localizedPath, withBase, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 <footer>
   <div class="wrap">
     <div>
-      <img src="/logo-v2.png" alt="INNOLAND" width="116" height="26" />
+      <img src={withBase("logo-v2.png")} alt="INNOLAND" width="116" height="26" />
       <p class="co">{t('foot.legal')}</p>
     </div>
     <div>

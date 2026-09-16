@@ -3,7 +3,7 @@
 // Πιστοποιήσεις: 5 πρότυπα (grid). Λήψεις: 4 έγγραφα πολιτικής (PDF, _source/policies -> public/policies).
 // PDF3 = συνδυασμένο έγγραφο 27001 + 22301 (Ασφάλεια Πληροφορίας & Επιχειρησιακή Συνέχεια).
 // PDF4 = Πολιτική Προσωπικών Δεδομένων (απόφαση χρήστη 2026-07-30: δημοσίευση ως έχει).
-import { useTranslations, type Lang } from '../i18n/utils';
+import { useTranslations, withBase, type Lang } from '../i18n/utils';
 
 const lang = (Astro.currentLocale ?? 'el') as Lang;
 const t = useTranslations(lang);
@@ -17,10 +17,10 @@ const certs = [
 ];
 
 const downloads = [
-  { href: '/policies/politiki-poiotitas.pdf', iso: 'ISO 9001:2015', name: t('pol.dl.1.t') },
-  { href: '/policies/perivallontiki-politiki.pdf', iso: 'ISO 14001:2015', name: t('pol.dl.2.t') },
-  { href: '/policies/politiki-asfaleias-pliroforias.pdf', iso: 'ISO/IEC 27001:2022, ISO 22301:2019', name: t('pol.dl.3.t') },
-  { href: '/policies/politiki-prosopikon-dedomenon.pdf', iso: 'ISO/IEC 27701:2019', name: t('pol.dl.4.t') },
+  { href: withBase('policies/politiki-poiotitas.pdf'), iso: 'ISO 9001:2015', name: t('pol.dl.1.t') },
+  { href: withBase('policies/perivallontiki-politiki.pdf'), iso: 'ISO 14001:2015', name: t('pol.dl.2.t') },
+  { href: withBase('policies/politiki-asfaleias-pliroforias.pdf'), iso: 'ISO/IEC 27001:2022, ISO 22301:2019', name: t('pol.dl.3.t') },
+  { href: withBase('policies/politiki-prosopikon-dedomenon.pdf'), iso: 'ISO/IEC 27701:2019', name: t('pol.dl.4.t') },
 ];
 ---
 

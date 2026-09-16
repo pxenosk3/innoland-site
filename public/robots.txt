@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://innoland.gr/sitemap-index.xml
