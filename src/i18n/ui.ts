@@ -164,6 +164,20 @@ export const ui = {
     'pol.dl.3.t': 'Πολιτική Ασφάλειας Πληροφοριών & Επιχειρησιακής Συνέχειας',
     'pol.dl.4.t': 'Πολιτική Προστασίας Προσωπικών Δεδομένων',
 
+    // -- δήλωση cookies/ιχνηλατών --
+    'ck.k': 'Ιχνηλάτες',
+    'ck.title': 'Δήλωση cookies και ιχνηλατών',
+    'ck.lead': 'Ο ιστότοπος είναι στατικός και δεν συλλέγει δεδομένα περιήγησης. Παρακάτω δηλώνεται τι αποθηκεύεται στη συσκευή σας και τι όχι.',
+    'ck.1.k': 'Cookies',
+    'ck.1.v': 'Δεν χρησιμοποιούνται. Ο ιστότοπος δεν εγκαθιστά ούτε διαβάζει cookies, ούτε δικά του ούτε τρίτων.',
+    'ck.2.k': 'Εργαλεία ανάλυσης και παρακολούθησης',
+    'ck.2.v': 'Δεν χρησιμοποιούνται. Δεν υπάρχουν υπηρεσίες στατιστικής ανάλυσης επισκεψιμότητας, διαφημιστικά pixel ή ενσωματώσεις μέσων κοινωνικής δικτύωσης.',
+    'ck.3.k': 'Περιεχόμενο τρίτων',
+    'ck.3.v': 'Δεν υπάρχει. Όλα τα στοιχεία των σελίδων φορτώνονται από τον ίδιο τον ιστότοπο, χωρίς κλήσεις σε εξωτερικούς παρόχους.',
+    'ck.4.k': 'Τοπική αποθήκευση',
+    'ck.4.v': 'Μία μόνο καταχώριση, η προτίμησή σας για ανοιχτή ή σκούρα εμφάνιση. Αποθηκεύεται μόνο αν πατήσετε τον σχετικό διακόπτη, παραμένει στη συσκευή σας και δεν αποστέλλεται πουθενά.',
+    'ck.note': 'Επειδή δεν χρησιμοποιούνται ιχνηλάτες που απαιτούν συγκατάθεση, ο ιστότοπος δεν εμφανίζει αίτημα αποδοχής cookies. Η αποθήκευση της προτίμησης εμφάνισης είναι αυστηρώς αναγκαία για λειτουργία που ενεργοποιεί ο ίδιος ο επισκέπτης. Τελευταίος έλεγχος: Σεπτέμβριος 2026.',
+
     // -- clients --
     'clients.k': 'Εμπειρία & πελατολόγιο',
     'clients.title': 'Εμπιστοσύνη από τον δημόσιο και τον ιδιωτικό τομέα',
@@ -483,6 +497,20 @@ export const ui = {
     'pol.dl.2.t': 'Environmental Policy',
     'pol.dl.3.t': 'Information Security & Business Continuity Policy',
     'pol.dl.4.t': 'Personal Data Protection Policy',
+
+    // -- cookie/tracker statement --
+    'ck.k': 'Trackers',
+    'ck.title': 'Cookie and tracker statement',
+    'ck.lead': 'This website is static and does not collect browsing data. The following states what is stored on your device and what is not.',
+    'ck.1.k': 'Cookies',
+    'ck.1.v': 'None. The website neither sets nor reads cookies, first-party or third-party.',
+    'ck.2.k': 'Analytics and tracking tools',
+    'ck.2.v': 'None. There are no web analytics services, advertising pixels or social media embeds.',
+    'ck.3.k': 'Third-party content',
+    'ck.3.v': 'None. All page assets are served by the website itself, with no calls to external providers.',
+    'ck.4.k': 'Local storage',
+    'ck.4.v': 'A single entry, your preference for light or dark appearance. It is stored only if you use the relevant toggle, it stays on your device and is never transmitted.',
+    'ck.note': 'Since no trackers requiring consent are used, the website does not display a cookie consent request. Storing the appearance preference is strictly necessary for a function the visitor activates themselves. Last verified: September 2026.',
 
     // -- clients --
     'clients.k': 'Experience & clients',

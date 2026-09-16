@@ -16,6 +16,11 @@ const certs = [
   { code: 'ISO/IEC 27701:2019', nm: t('iso.27701'), by: 'Libero Assurance' },
 ];
 
+const trackers = [1, 2, 3, 4].map((i) => ({
+  k: t(('ck.' + i + '.k') as any),
+  v: t(('ck.' + i + '.v') as any),
+}));
+
 const downloads = [
   { href: withBase('policies/politiki-poiotitas.pdf'), iso: 'ISO 9001:2015', name: t('pol.dl.1.t') },
   { href: withBase('policies/perivallontiki-politiki.pdf'), iso: 'ISO 14001:2015', name: t('pol.dl.2.t') },
@@ -75,3 +80,20 @@ const downloads = [
     <div class="note"><span class="dot"></span><span>{t('pol.dl.note')}</span></div>
   </div>
 </section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker"><span>{t('ck.k')}</span></div>
+      <h2>{t('ck.title')}</h2>
+      <p>{t('ck.lead')}</p>
+    </div>
+    <div class="idlist">
+      {trackers.map((r) => (
+        <div class="idrow"><div class="k">{r.k}</div><div class="v">{r.v}</div></div>
+      ))}
+    </div>
+    <div class="note"><span class="dot"></span><span>{t('ck.note')}</span></div>
+  </div>
+</section>
+
