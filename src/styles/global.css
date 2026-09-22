@@ -252,7 +252,6 @@ section.block{padding:clamp(56px,9vw,112px) 0}
 .iso{background:var(--surface); padding:22px 20px; display:flex; flex-direction:column; gap:6px}
 .iso .code{font-weight:800; font-size:16px; letter-spacing:.01em; color:var(--brand-deep); font-variant-numeric:tabular-nums}
 .iso .nm{font-size:15px; color:var(--ink); font-weight:600}
-.iso .by{font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-top:auto}
 .note{display:flex; align-items:center; gap:10px; margin-top:22px; font-size:14.5px; color:var(--ink-soft)}
 .note .dot{width:8px; height:8px; border-radius:50%; background:var(--accent); flex:none}
 

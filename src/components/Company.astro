@@ -27,11 +27,11 @@ const vals: { t: UiKey; d: UiKey }[] = [
   { t: 'val.4.t', d: 'val.4.d' },
 ];
 const certs: { code: string; nm: UiKey; by: string }[] = [
-  { code: 'ISO 9001:2015', nm: 'iso.9001', by: 'MTIC Intercert' },
-  { code: 'ISO 14001:2015', nm: 'iso.14001', by: 'MTIC Intercert' },
-  { code: 'ISO 22301:2019', nm: 'iso.22301', by: 'Libero Assurance' },
-  { code: 'ISO/IEC 27001:2022', nm: 'iso.27001', by: 'GCert' },
-  { code: 'ISO/IEC 27701:2019', nm: 'iso.27701', by: 'Libero Assurance' },
+  { code: 'ISO 9001:2015', nm: 'iso.9001' },
+  { code: 'ISO 14001:2015', nm: 'iso.14001' },
+  { code: 'ISO 22301:2019', nm: 'iso.22301' },
+  { code: 'ISO/IEC 27001:2022', nm: 'iso.27001' },
+  { code: 'ISO/IEC 27701:2019', nm: 'iso.27701' },
 ];
 ---
 
@@ -107,7 +107,7 @@ const certs: { code: string; nm: UiKey; by: string }[] = [
       <p>{t('iso.lead')}</p>
     </div>
     <div class="iso-grid">
-      {certs.map((c) => <div class="iso"><div class="code">{c.code}</div><div class="nm">{t(c.nm)}</div><div class="by">{c.by}</div></div>)}
+      {certs.map((c) => <div class="iso"><div class="code">{c.code}</div><div class="nm">{t(c.nm)}</div></div>)}
     </div>
     <div class="note"><span class="dot"></span><span>{t('iso.note')}</span></div>
     <p style="margin-top:26px">
