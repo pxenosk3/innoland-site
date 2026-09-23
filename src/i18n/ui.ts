@@ -356,8 +356,8 @@ export const ui = {
     'a11y.menu': 'Menu',
 
     // -- meta (homepage) --
-    'home.meta.title': 'INNOLAND LLC - Development & Entrepreneurship Consultants',
-    'home.meta.desc': 'INNOLAND LLC, development and entrepreneurship consultants for the public and the private sector. Study, maturation, implementation and evaluation of co-funded projects.',
+    'home.meta.title': 'INNOLAND Ltd - Development & Entrepreneurship Consultants',
+    'home.meta.desc': 'INNOLAND Ltd, development and entrepreneurship consultants for the public and the private sector. Study, maturation, implementation and evaluation of co-funded projects.',
 
     // -- nav --
     'nav.services': 'Services',
@@ -384,7 +384,7 @@ export const ui = {
     // -- about --
     'about.k': 'Who we are',
     'about.title': 'One company, two ways to create value',
-    'about.lead': 'INNOLAND LLC was founded in 2001 in Athens as a flexible and innovative structure delivering high-quality advisory and development services at local, regional and national level.',
+    'about.lead': 'INNOLAND Ltd was founded in 2001 in Athens as a flexible and innovative structure delivering high-quality advisory and development services at local, regional and national level.',
     'about.body': 'We specialise in the design, documentation and formulation of development and business strategies, in decision support and the reorganisation of organisations and processes, and in the preparation and management of local, regional and European development programmes. We systematically transfer know-how to the bodies we work with, building relationships of trust and practically usable results.',
     'about.model.t': 'Our structure',
     'about.model.p': 'A distinctive model that combines the stability of a permanent team with the depth of an extensive network of expertise.',
@@ -552,11 +552,11 @@ export const ui = {
     'foot.nav': 'Navigation',
     'foot.sectors': 'Sectors',
     'foot.contact': 'Contact',
-    'foot.legal.1': 'Innovative Business Development Networks LLC',
-    'foot.legal.2': 'trading as INNOLAND LLC',
+    'foot.legal.1': 'Innovative Business Development Networks Ltd',
+    'foot.legal.2': 'trading as INNOLAND Ltd',
     'foot.legal.3': 'Development and entrepreneurship consultants',
     'foot.legal.4': 'Member of ACCI and GEMI',
-    'foot.rights': '© 2026 INNOLAND LLC. All rights reserved.',
+    'foot.rights': '© 2026 INNOLAND Ltd. All rights reserved.',
     'foot.tag': 'Development, strategy, public and private initiative.',
 
     // -- IA v2 stub pages --
@@ -567,7 +567,7 @@ export const ui = {
     'page.tomeis.title': 'Sectors',
     'page.tomeis.intro': 'More than 200 development projects across five interconnected sectors of policy and the economy.',
     'page.etaireia.title': 'Company',
-    'page.etaireia.intro': 'INNOLAND LLC, a flexible and innovative structure delivering advisory and development services since 2001, with a core team and a broad network of associates.',
+    'page.etaireia.intro': 'INNOLAND Ltd, a flexible and innovative structure delivering advisory and development services since 2001, with a core team and a broad network of associates.',
     'page.erga.title': 'Track record',
     'page.erga.intro': 'Projects since 2001 for the public and the private sector across the country, grouped by field of activity and type of body.',
     'page.nea.title': 'News',
@@ -623,16 +623,16 @@ export const ui = {
 
     // -- IA v2: Company (history & identity from masters) --
     'co.hist.k': 'Brief history',
-    'co.hist.1': 'INNOLAND LLC (Innovative Business Development Networks, trading as INNOLAND LLC, formerly Anaptyxiaki Mentores LLC) was established in 2001 in Athens as a flexible structure delivering specialised, high-level services in programme management, research, studies and consulting, with an emphasis on Public Administration and Local Government.',
+    'co.hist.1': 'INNOLAND Ltd (Innovative Business Development Networks, trading as INNOLAND Ltd, formerly Anaptyxiaki Mentores Ltd) was established in 2001 in Athens as a flexible structure delivering specialised, high-level services in programme management, research, studies and consulting, with an emphasis on Public Administration and Local Government.',
     'co.hist.2': 'It specialises in the design, documentation and formulation of development and business strategies, in strategy and decision support (DSS), in the reorganisation of organisations and processes (BPR), and in the preparation and management of local, regional and European development programmes.',
     'co.hist.3': 'It systematically transfers know-how to the bodies it works with, building relationships of trust and practically usable results, with realistic studies and directly applicable proposals.',
     'co.id.k': 'Identity',
     'co.id.title': 'Company details',
     'co.id.lead': 'Key identity and legal details of the company.',
     'co.id.name.l': 'Legal name',
-    'co.id.name.v': 'Innovative Business Development Networks LLC',
+    'co.id.name.v': 'Innovative Business Development Networks Ltd',
     'co.id.dt.l': 'Trading name',
-    'co.id.dt.v': 'INNOLAND LLC',
+    'co.id.dt.v': 'INNOLAND Ltd',
     'co.id.founded.l': 'Founded',
     'co.id.founded.v': '2001, Athens',
     'co.id.seat.l': 'Registered seat',
@@ -675,7 +675,7 @@ export const ui = {
     'con.phone.v': '+30 210 6995053',
     'con.addr.k': 'Address',
     'con.legal.k': 'Legal details',
-    'con.legal.v': 'INNOLAND LLC (Innovative Business Development Networks). Member of ACCI and GEMI, GEMI No.: 004559501000',
+    'con.legal.v': 'INNOLAND Ltd (Innovative Business Development Networks). Member of ACCI and GEMI, GEMI No.: 004559501000',
     'con.note': 'This website does not provide an online contact form. Please contact us directly by email or phone.',
   },
 } as const;
